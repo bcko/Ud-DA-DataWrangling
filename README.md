@@ -109,3 +109,25 @@ Analyze and visualize your wrangled data in your Jupyter Notebook. At least **th
 Create a 300-600 word written report called `wrangle_report.pdf` that briefly describes your wrangling efforts. This is to be framed as an internal document.
 
 Create a >250 word written report called `act_report.pdf` that communicates the insights and displays the visualization(s) produced from your wrangled data. This is to be framed as an external document.
+
+## Twitter API
+### How to Query Twitter Data
+In this project, you'll be using [Tweepy](http://www.tweepy.org/) to query Twitter's API for additional data beyond the data included in the WeRateDogs Twitter archive. This additional data will include retweet count and favorite count.
+
+Tweet data is stored in JSON format by Twitter.
+
+Getting tweet JSON data via tweet ID using Tweepy is described well in this [StackOverflow answer](https://stackoverflow.com/questions/28384588/twitter-api-get-tweets-with-specific-id).
+
+Before you can run your API querying code, you need to set up your own Twitter application. And before that, you must sign up for a Twitter account. [This guide](https://www.slickremix.com/docs/how-to-get-api-keys-and-tokens-for-twitter/) describes the setup process well. (Note: if you can't set up an application because of mobile verification issues, email david.venturi@udacity.com and I will help you.)
+
+### Do Not Include Your API Keys and Access Tokens in Your Submission
+Do not include your API keys and access tokens in your project submission. This is standard practice for APIs and public code.
+
+### Twitter's Rate Limit
+Twitter's API has a rate limit. Rate limiting is used to control the rate of traffic sent or received by a network interface controller and is used to prevent DoS attacks.
+
+As per Twitter's [rate limiting](https://developer.twitter.com/en/docs/basics/rate-limiting) page:
+
+> Rate limits are divided into 15 minute intervals
+
+To query all of the tweet IDs in the WeRateDogs Twitter archive, it took me 20-30 minutes usually. Printing out each tweet ID after it was queried as well as [using a timer](https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python) was helpful for sanity reasons.
