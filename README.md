@@ -47,6 +47,7 @@ Back to the basic-ness of this dataset: retweet count and favorite count are a t
 One more cool thing: using a [neural network](https://classroom.udacity.com/nanodegrees/nd002/parts/20a33e0b-0f64-41a3-a9d9-c6f1207265c6/modules/14d9f5f1-9e7b-4bfb-97f3-bcdbf4a3699c/lessons/a8085857-3e28-4fc7-aeb8-da64ccbc2e20/concepts/28d4643b-3785-4700-bdee-4e5fc9963576) that can classify breeds of dogs*, I ran every image in the WeRateDogs Twitter archive. The results: a table full of image predictions alongside each tweet ID, image URL, and the image number that corresponded to the most confident prediction (1-4 since tweets can have four images).
 
 ![Tweet image prediction data](https://d17h27t6h515a5.cloudfront.net/topher/2017/October/59dd4d2c_screenshot-2017-10-10-18.43.41/screenshot-2017-10-10-18.43.41.png)
+
 Tweet image prediction data
 
 So for the last row in that table:
@@ -63,6 +64,7 @@ So for the last row in that table:
 And the #1 prediction for the image in that tweet was spot on...
 
 ![A golden retriever named Stuart](https://d17h27t6h515a5.cloudfront.net/topher/2017/October/59dd4e05_dog-pred/dog-pred.png)
+
 A golden retriever named Stuart
 
 So that's all fun and good. But all of this additional data, after being gathered, will need to be assessed and cleaned. This is where you come in.
