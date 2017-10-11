@@ -59,7 +59,19 @@ So for the last row in that table:
 * p2_conf is how confident the algorithm is in its #2 prediction → **1%**
 * p2_dog is whether or not the #2 prediction is a breed of dog → **TRUE**
 * etc.
+
 And the #1 prediction for the image in that tweet was spot on...
 
+![A golden retriever named Stuart](https://d17h27t6h515a5.cloudfront.net/topher/2017/October/59dd4e05_dog-pred/dog-pred.png)
+A golden retriever named Stuart
 
+So that's all fun and good. But all of this additional data, after being gathered, will need to be assessed and cleaned. This is where you come in.
+
+### Key Points
+Key points to keep in mind when data wrangling for this project:
+
+* We only want original ratings (no retweets) that have images.
+* Fully assessing and cleaning the entire dataset requires exceptional effort so only a subset of its issues (eight quality issues and two tidiness issues at minimum) need to be assessed and cleaned.
+* Cleaning includes merging according to the rules of [tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) to facilitate analysis and visualization.
+*Fun fact: creating this neural network is one of the projects in [Udacity's Artificial Intelligence Nanodegree program](https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889).
 
