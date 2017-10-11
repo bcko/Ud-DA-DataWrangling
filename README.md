@@ -77,3 +77,35 @@ Key points to keep in mind when data wrangling for this project:
 * Cleaning includes merging according to the rules of [tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) to facilitate analysis and visualization.
 *Fun fact: creating this neural network is one of the projects in [Udacity's Artificial Intelligence Nanodegree program](https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889).
 
+## Project Details
+* Data wrangling, which consists of:
+  * Gathering data
+  * Assessing data
+  * Cleaning data
+* Storing, analyzing, and visualizing your wrangled data
+* Reporting on 1) your wrangling efforts and 2) your data analyses and visualizations
+
+### Gathering Data for this Project
+Gather each of the three pieces of data as described below in a Jupyter Notebook titled `wrangle_act.ipynb`:
+
+1. The WeRateDogs Twitter archive. I am giving this file to you, so imagine it as a file on hand. Download this file manually by clicking the following link: `twitter_archive_enhanced.csv`
+
+2. The tweet image predictions, i.e., what breed of dog or inanimate object is present in each tweet. This file (`image_predictions.tsv`) hosted on Udacity's servers and should be downloaded programmatically using the following URL: https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv
+
+3. Each tweet's retweet count and favorite (i.e. "like") count at minimum, and any additional data you find interesting. Query Twitter's API (using the tweet IDs in the WeRateDogs Twitter archive) for each tweet's full set of data using Python's [Tweepy](http://www.tweepy.org/) library and store this data in a file called `tweet_json.txt` file, where each tweet's JSON data stored should be written to its own line. Then read this .txt file line by line into a pandas DataFrame with (at minimum) tweet ID, retweet count, and favorite count. Note: do not include your Twitter API keys and access tokens in your project submission.
+
+### Assessing Data for this Project
+After gathering each of the above pieces of data, assess it visually and programmatically for quality and tidiness issues. Detect and document at least **eight (8) quality issues** and **two (2) tidiness issues** in your Jupyter Notebook. To meet specifications, the issues that satisfy the Project Motivation (see previous page) must be assessed.
+
+### Cleaning Data for this Project
+Clean each of the issues you documented while assessing. The result should be a high quality and tidy master pandas DataFrame (or DataFrames if appropriate). Again, the issues that satisfy the Project Motivation must be cleaned.
+
+### Storing, Analyzing, and Visualizing Data for this Project
+Store the clean DataFrame(s) in a CSV file with the main one named `twitter_archive_master.csv`. If additional ones exist, name them appropriately. Additionally, you may store the cleaned data in a SQLite database (which is to be submitted as well if you do).
+
+Analyze and visualize your wrangled data in your Jupyter Notebook. At least **three (3) insights and one (1) visualization** must be produced.
+
+### Reporting for this Project
+Create a 300-600 word written report called `wrangle_report.pdf` that briefly describes your wrangling efforts. This is to be framed as an internal document.
+
+Create a >250 word written report called `act_report.pdf` that communicates the insights and displays the visualization(s) produced from your wrangled data. This is to be framed as an external document.
