@@ -131,3 +131,19 @@ As per Twitter's [rate limiting](https://developer.twitter.com/en/docs/basics/ra
 > Rate limits are divided into 15 minute intervals
 
 To query all of the tweet IDs in the WeRateDogs Twitter archive, it took me 20-30 minutes usually. Printing out each tweet ID after it was queried as well as [using a timer](https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python) was helpful for sanity reasons.
+
+## Project Submission
+### Wrangle and Analyze Data
+In this project, you'll gather, assess, and clean data then act on it through analysis, visualization and/or modeling.
+
+### Submission
+1. Ensure you pass all points on [the rubric](https://review.udacity.com/#!/rubrics/1136/view).
+2. Ensure you haven't included your API keys and access tokens in your project files.
+3. Package the following files into a zip archive, or push them from a GitHub repo:
+ 1. wrangle_act.ipynb
+ 2. wrangle_report.pdf
+ 3. act_report.pdf
+ 4. twitter_archive_enhanced.csv
+ 5. image_predictions.tsv
+ 6. tweet_json.txt
+ 7. twitter_archive_master.csv
