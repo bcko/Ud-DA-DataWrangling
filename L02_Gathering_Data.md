@@ -1,7 +1,6 @@
 # Gathering Data
 
 ## Introduction
-ou've reached lesson two of our data wrangling course.
 In lesson one, we walk through the whole wrangling process from gathering,
 to assessing, to cleaning data,
 and iterating if necessary.
@@ -208,3 +207,74 @@ It will process the cell and display our data frame.
 And there it is.
 
 - [pandas: Flat File Functions](https://pandas.pydata.org/pandas-docs/stable/api.html#flat-file)
+
+## Source: Web Scraping
+
+### Introduction
+All right. So we want to grab this audience score here to add to our data
+set and number of audience reviews to match our number of critic reviews.
+Unfortunately, Rotten Tomatoes hasn't made this easily accessible for us.
+One way we can get these pieces of data though, web scraping.
+Web scraping is a fancy way of saying extracting data from web sites using code.
+It's actually one of the first magical things that drew me to programming.
+Behind the scenes though, web scraping is actually quite simple.
+The data that lives on web pages is called HTML, HyperText Markup Language.
+It's made up of these things called tags which give the web page structure.
+Because HTML code is just text,
+these tags and the content within them can be accessed using parsers,
+and in Python, there is an awesome one called Beautiful Soup.
+We can download HTML and access it offline,
+or we can do it in real time over the Internet.
+For this lesson, we're going to download
+the HTML files and parse them using Beautiful Soup.
+Before we do though, let's explore the structure of HTML files.
+
+- [Rotten Tomatoes: E.T. the Extra-Terrestrial (1982)](https://www.rottentomatoes.com/m/et_the_extraterrestrial)
+- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+
+### Saving HTML
+
+The first step of web scraping is getting the web page's data,
+which is stored in a format called,
+HTML, HyperText Markup Language.
+One way of getting the HTML is by saving it to your computer manually,
+going to your web page,
+then to your browser's menu,
+and clicking save or hitting command or control
+S. But that's not the best way to do it for data analysis.
+There are two better ways,
+and they're both done programmatically,
+which is best for scalability and reproducibility,
+which is key in this case.
+Because we have 100 HTML files to access,
+and multiple people, i.e.,
+every student that takes this class is going to access them.
+Okay, so the first is actually downloading
+the HTML file programmatically to your computer.
+Here's all the code you need.
+You'll learn how this code works under the hood later in the lesson,
+when you download files from the internet programmatically.
+This is just the code to download one file.
+To download all 100 files,
+we just need to put this code in a loop.
+The second programmatic way to access
+HTML data is done by not saving a file to your computer at all,
+and simply working with the response content live in your computer's memory.
+You can use the BeautifulSoup HTML parser
+to help you work with the response content directly.
+You're going to dive into this BeautifulSoup library shortly.
+
+The two main ways to work with HTML files are:
+
+- Saving the HTML file to your computer (using the [Requests](http://docs.python-requests.org/en/master/) library for example) library and reading that file into a `BeautifulSoup` constructor
+- Reading the HTML response content directly into a `BeautifulSoup` constructor (again using the Requests library for example)
+
+You'll learn how this Requests code works under the hood shortly in “Downloading Files from The Internet.”
+
+For this lesson, you’re going to do neither of these. I've downloaded all of the Rotten Tomatoes HTML files for you and put them in a folder called rt_html in the Jupyter Notebooks in the Udacity classroom. If you want to work outside of the classroom, download [this zip file](https://d17h27t6h515a5.cloudfront.net/topher/2017/September/59ca6b7b_rt-html/rt-html.zip) and extract the rt_html folder. I recommend that you do and open the HTML files in your preferred text editor (e.g. [Sublime](https://www.sublimetext.com/), which is free) to inspect the HTML for the quizzes ahead.
+
+The rt_html folder contains the Rotten Tomatoes HTML for each of the Top 100 Movies of All Time as the list stood at the most recent update of this lesson. I'm giving you these historical files because the ratings will change over time and there will be inconsistencies with the recorded lesson videos. Also, a web page's HTML is known to change over time. Scraping code can break easily when web redesigns occur, which makes scraping brittle and not recommended for projects with longevity. So just use these HTML files provided to you and pretend like you saved them yourself with one of the methods described above.
+
+### More Information
+- [Towards Data Science: Ethics in Web Scraping](https://medium.com/towards-data-science/ethics-in-web-scraping-b96b18136f01)
+- [David Venturi: Screen scraping was the first "magical" thing that drew me to programming](https://twitter.com/venturidb/status/734757220525715456)
