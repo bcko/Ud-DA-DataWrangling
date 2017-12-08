@@ -194,7 +194,17 @@ Or whether or not entries are quoted and more.
 ### Quiz
 In the Jupyter Notebook below, import the Rotten Tomatoes Top 100 Movies of All Time TSV file ('bestofrt.tsv') into a pandas DataFrame. Hint: read up on the sep parameter in the read_csv documentation.
 
-```python3
+```python
 import pandas as pd
 df = pd.read_csv('bestofrt.tsv', sep='\t')
 ```
+Reading a tab separated values file into a Panda's data frame is
+very similar to reading a CSV or a Comma Separated Values file.
+We still use read_csv,
+then put in the path to our file, which is bestofrt.tsv,
+then the only difference is including the set parameter,
+which we want to be a tab, which is \t.
+It will process the cell and display our data frame.
+And there it is.
+
+- [pandas: Flat File Functions](https://pandas.pydata.org/pandas-docs/stable/api.html#flat-file)
