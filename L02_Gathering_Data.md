@@ -191,4 +191,10 @@ You just need to change the parameters to fit your specific use case,
 like changing the separator parameter set, for example.
 Or whether or not entries are quoted and more.
 
+### Quiz
+In the Jupyter Notebook below, import the Rotten Tomatoes Top 100 Movies of All Time TSV file ('bestofrt.tsv') into a pandas DataFrame. Hint: read up on the sep parameter in the read_csv documentation.
 
+```python3
+import pandas as pd
+df = pd.read_csv('bestofrt.tsv', sep='\t')
+```
